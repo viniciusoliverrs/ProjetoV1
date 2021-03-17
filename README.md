@@ -17,7 +17,6 @@
 <li>
 url - /PersonPhone <br>
 Method - GET<br>
-Parameters - PhoneNumberTypeID (optional)
 </li>
 <li>
 url - /PersonPhone/:BusinessEntityID<br>

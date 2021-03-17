@@ -4,12 +4,9 @@ const dbConn = require('../config/db.config')
 
 
 router.get('/PersonPhone', (req, res) => {
+    console.log(req.body);
     dbConn.connect(function(err) {
         let sql = "SELECT * FROM personphone";
-        if (req.body.PhoneNumberTypeID) {
-            sql = `SELECT * FROM personphone WHERE PhoneNumberTypeID = ${req.body.PhoneNumberTypeID}`;
-        }
-        console.log(sql);
         dbConn.query(sql, function(err, result) {
             return res.json({ item: result });
         });

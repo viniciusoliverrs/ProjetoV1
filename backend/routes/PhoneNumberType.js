@@ -5,7 +5,6 @@ const dbConn = require('../config/db.config')
 
 router.get('/PhoneNumberType', (req, res) => {
     dbConn.connect(function(err) {
-        console.log("/PhoneNumberType");
         let sql = "SELECT * FROM phonenumbertype";
         dbConn.query(sql, function(err, result) {
             return res.json({ item: result });
