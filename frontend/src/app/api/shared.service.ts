@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-  public url:String = "localhost:3000";
+  public baseUrl:String = "localhost:3000";
   constructor() { }
 }

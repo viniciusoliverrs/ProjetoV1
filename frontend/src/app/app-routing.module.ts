@@ -6,10 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: 'person-phone', 
-    pathMatch: 'full' 
+    redirectTo: 'phone-number-type-component',
+    pathMatch: 'full'
   },
-  {
+ {
     path: 'person-phone',
     component: PersonPhoneComponent,
     loadChildren: () => import('../app/person-phone/person-phone.component').then(m => m.PersonPhoneComponent)

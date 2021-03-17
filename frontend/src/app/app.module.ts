@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PhonenNumberTypeComponent } from './phonen-number-type/phonen-number-type.component';
 import { PersonPhoneComponent } from './person-phone/person-phone.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
