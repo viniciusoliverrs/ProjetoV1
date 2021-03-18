@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
     this.phoneNumberType.delete(data).subscribe(response => {
       { status } response;
       if (status = "OK") {
+        alert("Successfully deleted!!");
         this.phoneNumberType.getAll().subscribe(response => {
           this.data = response;
         });

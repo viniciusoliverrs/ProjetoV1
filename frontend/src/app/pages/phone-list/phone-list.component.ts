@@ -46,6 +46,7 @@ export class PhoneListComponent implements OnInit {
     this.personPhone.delete(data).subscribe(response => {
       { status } response;
       if (status = "OK") {
+        alert("Successfully deleted!!");
         const data = { "PhoneNumberTypeID": this.PhoneNumberTypeID };
         this.personPhone.getAll(data).subscribe(response => {
           this.data = response;
