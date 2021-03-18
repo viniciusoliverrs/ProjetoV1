@@ -7,9 +7,9 @@
   <li>Later, you need to export database.sql to your mysql server.</li>
   <li>After that, open the console, execute this: <strong>git clone</strong> https://github.com/viniciusoliverrs/ProjetoTeste.git.</li>
   <li>Open the backend folder.</li>
-  <il>Open the console and write: <strong>nodemon app</strong> to run the project.</li>
+  <li>Open the console and write: <strong>nodemon app</strong> to run the project.</li>
   <li>Open the frontend folder.</li>
-  <il>Open the console and write: <strong>ng serve --open</strong> to run the project.</li>
+  <li>Open the console and write: <strong>ng serve --open</strong> to run the project.</li>
  </ul>
 </p>
 <hr>
