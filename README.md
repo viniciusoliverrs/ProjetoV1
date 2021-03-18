@@ -1,13 +1,15 @@
-<h1>Backend:</h1>
-<p>Technologies used - NodeJS and MySQL</p>
+<h1>Backend and Frontend:</h1>
+<p>Technologies used - NodeJS, AngularCLI, Bootstrap, MySQL</p>
 <p>
- How to run the execute project:<br>
+ How to run the execute projects:<br>
  <ul>
   <li>You need to have a server with mysql on your computer.</li>
   <li>Later, you need to export database.sql to your mysql server.</li>
-  <li>After that, open the console, execute this: git clone https://github.com/viniciusoliverrs/ProjetoTeste.git.</li>
-  <li>Open the project folder.</li>
+  <li>After that, open the console, execute this: <strong>git clone</strong> https://github.com/viniciusoliverrs/ProjetoTeste.git.</li>
+  <li>Open the backend folder.</li>
   <il>Open the console and write: <strong>nodemon app</strong> to run the project.</li>
+  <li>Open the frontend folder.</li>
+  <il>Open the console and write: <strong>ng serve --open</strong> to run the project.</li>
  </ul>
 </p>
 <hr>
@@ -41,12 +43,12 @@ Parameters - BusinessEntityID
 </ul>
 <hr>
 <ul>
-<li>
+<li> 
 url - /PhoneNumberType <br>
 Method - GET<br>
 </li>
 <li>
-url - /PhoneNumberType/:PhoneNumberTypeID<br>
+url - /PhoneNumberType?PhoneNumberType=:PhoneNumberTypeID<br>
 Method - GET<br>
 Parameters - PhoneNumberTypeID
 </li>
