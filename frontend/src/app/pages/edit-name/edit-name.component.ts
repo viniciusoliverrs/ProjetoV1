@@ -16,7 +16,6 @@ export class EditNameComponent implements OnInit {
       const data = { "PhoneNumberTypeID": parseInt(params.PhoneNumberTypeID) };
       this.phoneNumberType.get(data).subscribe(response=>{
         this.data = response;
-        console.log(response);
       });
     });
   }
