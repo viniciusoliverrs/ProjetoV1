@@ -32,14 +32,13 @@ export class HomeComponent implements OnInit {
   }
   delPhoneNumberType(PhoneNumberTypeID: any) {
     const data = { "PhoneNumberTypeID": PhoneNumberTypeID };
-    console.log(data);
     this.phoneNumberType.delete(data).subscribe(response => {
       { status } response;
       if (status = "OK") {
-        alert("Successfully deleted!!");
         this.phoneNumberType.getAll().subscribe(response => {
           this.data = response;
         });
+        alert("Successfully deleted!!");
       } else {
         alert("There was an error deleting the record! Try again.");
       }

@@ -21,14 +21,12 @@
 <table class="table">
     <thead>
         <tr>
-            <th>#</th>
             <th>Name</th>
             <th colspan="3">Options</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of data.item">
-            <th>{{item.BusinessEntityID}}</th>
             <th>{{item.PhoneNumber}}</th>
             <th><button [routerLink]="['/editPhone']" [queryParams]="{ PhoneNumberTypeID:item.PhoneNumberTypeID,BusinessEntityID: item.BusinessEntityID}" class="btn btn-warning">Edit</button></th>
             <th><button (click)="delPersonNumber(item.PhoneNumberTypeID,item.BusinessEntityID)" class="btn btn-danger">Delete</button></th>

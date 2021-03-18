@@ -27,7 +27,6 @@ export class PhoneListComponent implements OnInit {
     }
     else {
       data.PhoneNumberTypeID = this.PhoneNumberTypeID;
-      console.log(data);
       this.personPhone.add(data).subscribe(response => {
         { status } response;
         if (status = "OK") {
@@ -46,11 +45,11 @@ export class PhoneListComponent implements OnInit {
     this.personPhone.delete(data).subscribe(response => {
       { status } response;
       if (status = "OK") {
-        alert("Successfully deleted!!");
         const data = { "PhoneNumberTypeID": this.PhoneNumberTypeID };
         this.personPhone.getAll(data).subscribe(response => {
           this.data = response;
         });
+        alert("Successfully deleted!!");
       } else {
         alert("There was an error deleting the record! Try again.");
       }
