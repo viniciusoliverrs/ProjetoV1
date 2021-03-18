@@ -1,5 +1,19 @@
 <div class="row">
     <div class="col-md-12">
-
+        <h1>Edit Person Phone:</h1>
+    </div>
+    <div class="col-md-12">
+        <form #form="ngForm">
+            <div class="input-group" *ngFor="let item of data.item">
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        Person Phone:*
+                    </span>
+                </div>
+                <input class="form-control" type="text" name="PhoneNumber" ngModel="{{item.PhoneNumber}}" />
+            </div>
+            <button class="btn btn-warning" style="margin-top:5px;" type="button" onclick="window.history.back()">Cancel</button>
+            <button (click)="editPhone(form.value)" class="btn btn-success" style="float:right;margin-top:5px;">Save</button>
+        </form>
     </div>
 </div>

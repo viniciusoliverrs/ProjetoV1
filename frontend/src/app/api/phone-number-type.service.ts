@@ -13,7 +13,8 @@ export class PhoneNumberTypeService {
     return this.http.get(`${this.shared.baseUrl}/PhoneNumberType`);
   }
   
-  get(id:any){
+  get(data:any){
+    return this.http.get(`${this.shared.baseUrl}/PhoneNumberType?PhoneNumberTypeID=${data.PhoneNumberTypeID}`);
   }
 
   add(data:any){
