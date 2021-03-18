@@ -17,6 +17,11 @@
 <hr>
 <ul>
 <li>
+url - /searchPhone?Search=:Search<br>
+Method - GET<br>
+Parameters - Search
+</li>
+<li>
 url - /PersonPhone <br>
 Method - GET<br>
 </li>
