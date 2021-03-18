@@ -9,6 +9,15 @@ router.get('/PhoneNumberType', (req, res) => {
         if (req.query.PhoneNumberTypeID) {
             sql = `SELECT * FROM phonenumbertype WHERE PhoneNumberTypeID =  ${req.query.PhoneNumberTypeID}`;
         }
+        dbConn.query(sql, function(err, result) {
+            return res.status(200).json({ "item": result });
+        });
+    });
+});
+/* searchPhone- GET */
+router.get('/searchPhone', (req, res) => {
+    dbConn.connect(function(err) {
+        let sql = `SELECT * FROM phonenumbertype AS pn INNER JOIN personphone AS pp ON pp.PhoneNumberTypeID = pn.PhoneNumberTypeID WHERE pn.Name LIKE "%${req.query.Search}%" OR pp.PhoneNumber LIKE "%${req.query.Search}%"`;
         console.log(sql);
         dbConn.query(sql, function(err, result) {
             return res.status(200).json({ "item": result });

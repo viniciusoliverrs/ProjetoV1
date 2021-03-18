@@ -12,7 +12,9 @@ export class PhoneNumberTypeService {
   getAll(){
     return this.http.get(`${this.shared.baseUrl}/PhoneNumberType`);
   }
-  
+  searchPhone(data:any){
+    return this.http.get(`${this.shared.baseUrl}/searchPhone?Search=${data.Search}`);
+  }
   get(data:any){
     return this.http.get(`${this.shared.baseUrl}/PhoneNumberType?PhoneNumberTypeID=${data.PhoneNumberTypeID}`);
   }

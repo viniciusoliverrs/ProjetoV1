@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PhoneListComponent } from './pages/phone-list/phone-list.component';
 import { EditPhoneComponent } from './pages/edit-phone/edit-phone.component';
 import { EditNameComponent } from './pages/edit-name/edit-name.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditNameComponent } from './pages/edit-name/edit-name.component';
     HomeComponent,
     PhoneListComponent,
     EditPhoneComponent,
-    EditNameComponent
+    EditNameComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Search:</h1>
+    </div>
+    <div class="col-md-12">
+        <form #form="ngForm">
+            <div class="input-group ">
+                <input type="text" name="Search" placeholder="Person phone or Phone number type" class="form-control" ngModel/>
+            </div>
+            <button (click)="getData(form.value)" class="btn btn-success" style="float:right;margin-top:5px;">Search</button>
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data.item">
+            <th>{{item.Name}}</th>
+            <th>{{item.PhoneNumber}}</th>
+        </tr>
+    </tbody>
+</table>

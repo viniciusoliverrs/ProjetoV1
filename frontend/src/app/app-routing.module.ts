@@ -4,6 +4,7 @@ import { HomeComponent } from '../app/pages/home/home.component';
 import { EditNameComponent } from './pages/edit-name/edit-name.component';
 import { EditPhoneComponent } from './pages/edit-phone/edit-phone.component';
 import { PhoneListComponent } from './pages/phone-list/phone-list.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   { 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'phoneList',
     component: PhoneListComponent
+  },
+  {
+    path: 'Search',
+    component: SearchComponent
   },
   {
     path: 'editPhone',
