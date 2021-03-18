@@ -1,5 +1,7 @@
 <h1>Backend and Frontend:</h1>
-<p>Technologies used - NodeJS, AngularCLI, Bootstrap, MySQL</p>
+<p>Technologies used on the project - NodeJS, AngularCLI, Bootstrap, MySQL, Git</p>
+<p>Software used development - Visual Studio Code</p>
+<p>Software used to test routes - Postman</p>
 <p>
  How to run the execute projects:<br>
  <ul>
