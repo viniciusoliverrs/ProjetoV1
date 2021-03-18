@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../app/pages/home/home.component';
+import { EditPhoneComponent } from './pages/edit-phone/edit-phone.component';
 import { PhoneListComponent } from './pages/phone-list/phone-list.component';
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'phone-list',
     component: PhoneListComponent
+  },
+  {
+    path: 'edit-phone',
+    component: EditPhoneComponent
   }
 ];
 

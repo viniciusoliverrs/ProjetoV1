@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { PhoneListComponent } from './pages/phone-list/phone-list.component';
+import { EditPhoneComponent } from './pages/edit-phone/edit-phone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PhoneListComponent
+    PhoneListComponent,
+    EditPhoneComponent
   ],
   imports: [
     BrowserModule,

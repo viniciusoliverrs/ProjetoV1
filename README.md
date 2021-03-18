@@ -19,7 +19,7 @@ url - /PersonPhone <br>
 Method - GET<br>
 </li>
 <li>
-url - /PersonPhone/:BusinessEntityID<br>
+url - /PersonPhone?BusinessEntityID=:BusinessEntityID<br>
 Method - GET<br>
 Parameters - BusinessEntityID
 </li>
@@ -31,7 +31,7 @@ Parameters - BusinessEntityID
 <li>
  url - /editPersonPhone<br>
  Method - POST<br>
- Parameters - PhoneNumber, BusinessEntityID, PhoneNumberTypeID
+ Parameters - PhoneNumber, BusinessEntityID
 </li>
 <li>
  url - /deletePersonPhone<br>

@@ -6,7 +6,6 @@ const dbConn = require('../config/db.config')
 router.get('/PersonPhone', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `SELECT * FROM personphone WHERE PhoneNumberTypeID = ${req.query.PhoneNumberTypeID}`;
-        console.log(sql);
         dbConn.query(sql, function(err, result) {
             return res.json({ item: result });
         });
@@ -16,7 +15,7 @@ router.get('/PersonPhone/:BusinessEntityID', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `SELECT * FROM personphone WHERE pp.BusinessEntityID = ${req.body.BusinessEntityID} `;
         dbConn.query(sql, function(err, result) {
-            return res.json({ item: result });
+            return res.status(200).json({ item: result });
         });
     });
 });
@@ -25,7 +24,7 @@ router.post('/addPersonPhone', (req, res) => {
         let sql = `INSERT INTO personphone (PhoneNumber,PhoneNumberTypeID) VALUES ("${req.body.PhoneNumber}",${req.body.PhoneNumberTypeID})`;
         dbConn.query(sql, function(err, result) {
             if (!err) {
-                return res.json({ status: "OK" });
+                return res.status(200).json({ status: "OK" });
             } else {
                 return res.json({ status: "ERR" });
             }
@@ -34,7 +33,7 @@ router.post('/addPersonPhone', (req, res) => {
 });
 router.post('/editPersonPhone', (req, res) => {
     dbConn.connect(function(err) {
-        let sql = `UPDATE personphone SET PhoneNumber = "${req.body.PhoneNumber}" WHERE BusinessEntityID =  ${req.body.BusinessEntityID} AND PhoneNumberTypeID = ${req.body.PhoneNumberTypeID}`;
+        let sql = `UPDATE personphone SET PhoneNumber = "${req.body.PhoneNumber}" WHERE BusinessEntityID =  ${req.body.BusinessEntityID}`;
         dbConn.query(sql, function(err, result) {
             if (!err) {
                 return res.json({ status: "OK" });
