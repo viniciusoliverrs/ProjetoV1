@@ -28,9 +28,9 @@
         <tr *ngFor="let item of data.item">
             <th>{{item.PhoneNumberTypeID}}</th>
             <th>{{item.Name}}</th>
-            <th><button [routerLink]="['/edit-name']" [queryParams]="{ PhoneNumberTypeID:item.PhoneNumberTypeID}" class="btn btn-warning">Edit</button></th>
+            <th><button [routerLink]="['/editName']" [queryParams]="{ PhoneNumberTypeID:item.PhoneNumberTypeID}" class="btn btn-warning">Edit</button></th>
             <th><button (click)="delPhoneNumberType(item.PhoneNumberTypeID)" class="btn btn-danger">Delete</button></th>
-            <th><button class="btn btn-primary" [routerLink]="['/phone-list']" [queryParams]="{ PhoneNumberTypeID: item.PhoneNumberTypeID }">Phone List</button></th>
+            <th><button class="btn btn-primary" [routerLink]="['/phoneList']" [queryParams]="{ PhoneNumberTypeID: item.PhoneNumberTypeID }">Phone List</button></th>
         </tr>
     </tbody>
 </table>

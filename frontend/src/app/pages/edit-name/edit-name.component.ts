@@ -22,13 +22,13 @@ export class EditNameComponent implements OnInit {
   }
   editName(data: any) {
     if (data.PhoneNumber == "") {
-      alert("Requered Phone Number Type!")
+      alert("Phone number type requered!")
     } else {
       console.log(data);
       this.phoneNumberType.edit(data).subscribe(response => {
         { status } response;
         if (status = "OK") {
-          this.router.navigateByUrl("/home");
+          this.router.navigateByUrl("/Home");
         } else {
           alert("There was an error deleting the record! Try again.");
         }

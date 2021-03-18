@@ -8,23 +8,23 @@ import { PhoneListComponent } from './pages/phone-list/phone-list.component';
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: 'home',
+    redirectTo: 'Home',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'Home',
     component: HomeComponent
   },
   {
-    path: 'phone-list',
+    path: 'phoneList',
     component: PhoneListComponent
   },
   {
-    path: 'edit-phone',
+    path: 'editPhone',
     component: EditPhoneComponent
   },
   {
-    path: 'edit-name',
+    path: 'editName',
     component: EditNameComponent
   }
 ];

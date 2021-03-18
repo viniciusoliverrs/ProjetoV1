@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
   addPhoneNumberType(data: any) {
     if (data.Name == "") {
-      alert("Requered Phone Number Type!")
+      alert("Telephone number type required!")
     } else {
       this.phoneNumberType.add(data).subscribe(response => {
         { status } response;

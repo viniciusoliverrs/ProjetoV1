@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const dbConn = require('../config/db.config')
 
-
+/* PersonPhone - GET */
 router.get('/PersonPhone', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `SELECT * FROM personphone WHERE PhoneNumberTypeID = ${req.query.PhoneNumberTypeID}`;
@@ -15,6 +15,8 @@ router.get('/PersonPhone', (req, res) => {
         });
     });
 });
+
+/* addPersonPhone - POST */
 router.post('/addPersonPhone', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `INSERT INTO personphone (PhoneNumber,PhoneNumberTypeID) VALUES ("${req.body.PhoneNumber}",${req.body.PhoneNumberTypeID})`;
@@ -27,6 +29,7 @@ router.post('/addPersonPhone', (req, res) => {
         });
     });
 });
+/* editPersonPhone - POST */
 router.post('/editPersonPhone', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `UPDATE personphone SET PhoneNumber = "${req.body.PhoneNumber}" WHERE BusinessEntityID =  ${req.body.BusinessEntityID}`;
@@ -39,6 +42,7 @@ router.post('/editPersonPhone', (req, res) => {
         });
     });
 });
+/* delPersonPhone - POST */
 router.post('/delPersonPhone', (req, res) => {
     dbConn.connect(function(err) {
         let sql = `DELETE FROM personphone WHERE BusinessEntityID =  ${req.body.BusinessEntityID} AND PhoneNumberTypeID = ${req.body.PhoneNumberTypeID}`;

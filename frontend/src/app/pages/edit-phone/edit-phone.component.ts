@@ -25,12 +25,12 @@ export class EditPhoneComponent implements OnInit {
   editPhone(data: any) {
     this.datae.PhoneNumber = data.PhoneNumber;
     if (this.datae.PhoneNumber == "") {
-      alert("Requered Phone Number!")
+      alert("Phone number requered!")
     } else {
       this.personPhone.edit(this.datae).subscribe(response => {
         { status } response;
         if (status = "OK") {
-          this.router.navigateByUrl("/home");
+          this.router.navigateByUrl("/Home");
         } else {
           alert("There was an error deleting the record! Try again.");
         }
