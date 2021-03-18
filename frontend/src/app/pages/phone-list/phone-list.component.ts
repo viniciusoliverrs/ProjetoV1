@@ -22,8 +22,8 @@ export class PhoneListComponent implements OnInit {
     });
   }
   addPersonNumber(data: any) {
-    if (data.PersonPhone == '') {
-      alert("Requered Person Phone!");
+    if (data.PhoneNumber == '') {
+      alert("Person phone requered!");
     }
     else {
       data.PhoneNumberTypeID = this.PhoneNumberTypeID;
